@@ -2,6 +2,7 @@
 #define ORDER_H
 
 #include <string>
+#include <iostream>
 
 class order {
 private:
@@ -20,6 +21,53 @@ public:
 	 *		quantity.
 	 */
 	order();
+
+	/*
+ 	* Name: order
+ 	* Description: non-default constructor for orders
+	* Parameters:
+ 	*		order_number(int): number of the order
+			coffee_name(std::string): name of coffee for the order
+			coffee_size(char): size of coffee for the order
+			quantity(int): quantity of coffees for the order
+ 	* Returns (order): initilized order with member variables set
+ 	*/
+	order(int order_number, std::string coffee_name, char coffee_size, 
+		int quantity);
+
+	/*
+ 	* Name: print_order_info
+ 	* Description: prints order information to terminal
+ 	*/
+	void print_order_info() const;
+	
+	/*
+ 	* Name: get_order_number
+ 	* Description: gets order number of order object
+ 	* Returns (int): order number
+ 	*/
+	int get_order_number() const;
+
+	/*
+ 	* Name: get_coffee_name_order
+ 	* Description: gets coffee name of order object
+ 	* Returns (std::string): name of coffee of order
+ 	*/
+	std::string get_coffee_name_order() const;
+
+	/*
+ 	* Name: get_coffee_size
+ 	* Description: gets coffee size of order object
+ 	* Returns (char): coffee size of order
+ 	*/
+	char get_coffee_size() const;
+
+	/*
+ 	* Name: get_quantity
+ 	* Description: gets quantity of coffees from order
+ 	* Returns (int): quantity of coffees 
+ 	*/
+	int get_quantity() const;
 };
 
 #endif

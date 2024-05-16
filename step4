@@ -1,0 +1,4 @@
+a shop has a menu and a list of order objects
+a shop can add coffee to the menu and add an order
+a menu has coffee objects and can add coffee objects to its list
+
